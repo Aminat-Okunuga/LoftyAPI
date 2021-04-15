@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const app = express();
 const ONLINE_DB =
   "mongodb+srv://AminatOkunuga:AminatOkunuga@cluster0.l0t8b.mongodb.net/money?retryWrites=true&w=majority ";
-const port = 2200;
+const port = process.env.port || 2200;
 
 // db connsction confirmation
 mongoose

@@ -7,6 +7,7 @@
  */
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 const ONLINE_DB =
   "mongodb+srv://AminatOkunuga:AminatOkunuga@cluster0.l0t8b.mongodb.net/money?retryWrites=true&w=majority ";
@@ -24,6 +25,7 @@ mongoose
     console.log("Database has been connected successfully...");
   });
 
+app.use(cors());
 app.use(express.json());
 app.use("/", require("./MVC/controller"));
 
